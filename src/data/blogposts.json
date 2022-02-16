@@ -1,0 +1,10 @@
+[
+  {
+    "text": "This is my first post",
+    "comments": ["Lunch and Learn session", "Hello colleagues!"]
+  },
+  {
+    "text": "This is my second post",
+    "comments": []
+  }
+]
