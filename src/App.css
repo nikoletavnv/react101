@@ -1,7 +1,19 @@
 .App {
-  text-align: center;
+  width: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .App-header {
+  text-align: center;
   font-size: 2em;
+  padding: 10px;
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+  border-top: solid 5px var(--primary-color);
 }

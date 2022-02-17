@@ -27,12 +27,15 @@ const CreateComment = (props) => {
         className="primary"
         type="button"
         onClick={(e) => {
+          if (text.trim().length === 0) {
+            return;
+          }
           e.preventDefault();
           props.submitComment(text);
           setText("");
         }}
       >
-        Submit
+        Post Comment
       </button>
     </div>
   );
