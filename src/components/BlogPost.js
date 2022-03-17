@@ -3,15 +3,16 @@ import Comment from "./Comment";
 import CreateComment from "./CreateComment";
 
 const renderComments = (comments) => {
-  if (!comments || !Array.isArray(comments)) return <div>No comments yet</div>;
+  if (!comments || !Array.isArray(comments) || comments.length === 0)
+    return <div>No comments yet</div>;
 
   return (
-    <>
-      <div className="BlogPost-comments">{comments.length} comments</div>
-      {comments.map((comment) => (
-        <Comment text={comment} />
-      ))}
-    </>
+    //<>
+    [
+      <div className="BlogPost-comments">{comments.length} comments</div>,
+      comments.map((comment, index) => <Comment text={comment} key={index} />)
+    ]
+    //</>
   );
 };
 
